@@ -147,7 +147,7 @@ The `getprivatesendinfo` RPC {{summary_getPrivateSendInfo}}
 {% enditemplate %}
 
 
-*Example from Dash Core 0.14.1*
+*Example from Dash Core 0.14.1 (regular node)*
 
 {% highlight bash %}
 dash-cli -testnet getprivatesendinfo
