@@ -4,6 +4,8 @@ http://opensource.org/licenses/MIT.
 {% endcomment %}
 {% assign filename="_includes/devdoc/dash-core/rpcs/rpcs/getpoolinfo.md" %}
 
+<!--__-->
+
 ##### GetPoolInfo
 {% include helpers/subhead-links.md %}
 
@@ -12,6 +14,9 @@ http://opensource.org/licenses/MIT.
 {% autocrossref %}
 
 The `getpoolinfo` RPC {{summary_getPoolInfo}}
+
+{{WARNING}} `getpoolinfo` will be removed in a later version of Dash
+Core.  Use the RPCs listed in the See Also subsection below instead.
 
 *Parameters: none*
 
@@ -115,6 +120,8 @@ Result:
 }
 {% endhighlight %}
 
-*See also:*
+*See also*
+
+* [GetPrivateSendInfo][rpc getprivatesendinfo]: {{summary_getPrivateSendInfo}}
 
 {% endautocrossref %}
