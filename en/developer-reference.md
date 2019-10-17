@@ -204,6 +204,8 @@ untrusted source.
 
 {% include devdoc/dash-core/rpcs/rpcs/getpoolinfo.md %}
 
+{% include devdoc/dash-core/rpcs/rpcs/getprivatesendinfo.md %}
+
 {% include devdoc/dash-core/rpcs/rpcs/getrawchangeaddress.md %}
 
 {% include devdoc/dash-core/rpcs/rpcs/getrawmempool.md %}

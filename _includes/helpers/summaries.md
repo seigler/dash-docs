@@ -68,6 +68,7 @@ This file is licensed under the terms of its source texts{%endcomment%}
 {% assign summary_getNewAddress="returns a new Dash address for receiving payments. If an account is specified, payments received with the address will be credited to that account." %}
 {% assign summary_getPeerInfo="returns data about each connected network node." %}
 {% assign summary_getPoolInfo="returns an object containing mixing pool related information." %}
+{% assign summary_getPrivateSendInfo="returns an object containing an information about PrivateSend settings and state." %}
 {% assign summary_getRawChangeAddress="returns a new Dash address for receiving change. This is for use with raw transactions, not normal use." %}
 {% assign summary_getRawMemPool="returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object." %}
 {% assign summary_getRawTransaction="gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so the RPC may fail on historic transactions unless you use the non-default `txindex=1` in your Dash Core startup settings." %}

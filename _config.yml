@@ -232,6 +232,7 @@ devsearches:
     - 'GetNewAddress': "/en/developer-reference#getnewaddress"
     - 'GetPeerInfo': "/en/developer-reference#getpeerinfo"
     - 'GetPoolInfo': "/en/developer-reference#getpoolinfo"
+    - 'GetPrivateSendInfo': "/en/developer-reference#getprivatesendinfo"
     - 'GetRawChangeAddress': "/en/developer-reference#getrawchangeaddress"
     - 'GetRawMempool': "/en/developer-reference#getrawmempool"
     - 'GetRawTransaction': "/en/developer-reference#getrawtransaction"

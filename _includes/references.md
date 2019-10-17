@@ -135,6 +135,7 @@ http://opensource.org/licenses/MIT.
 [rpc getnewaddress]: /en/developer-reference#getnewaddress
 [rpc getpeerinfo]: /en/developer-reference#getpeerinfo
 [rpc getpoolinfo]: /en/developer-reference#getpoolinfo
+[rpc getprivatesendinfo]: /en/developer-reference#getprivatesendinfo
 [rpc getrawchangeaddress]: /en/developer-reference#getrawchangeaddress
 [rpc getrawmempool]: /en/developer-reference#getrawmempool
 [rpc getrawtransaction]: /en/developer-reference#getrawtransaction

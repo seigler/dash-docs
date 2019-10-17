@@ -421,6 +421,8 @@ DIP8:
 '`getpeerinfo` RPC': rpc getpeerinfo
 '`getpoolinfo`': rpc getpoolinfo
 '`getpoolinfo` RPC': rpc getpoolinfo
+'`getprivatesendinfo`': rpc getprivatesendinfo
+'`getprivatesendinfo` RPC': rpc getprivatesendinfo
 '`getrawchangeaddress`': rpc getrawchangeaddress
 '`getrawchangeaddress` RPC': rpc getrawchangeaddress
 '`getrawmempool`': rpc getrawmempool
