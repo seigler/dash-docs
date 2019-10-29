@@ -1,0 +1,331 @@
+#!/usr/bin/env bash
+
+perl \
+-pe "s~\{\{DASH_NOT_IMPLEMENTED\}\}~**<abbr title=\"Not Implemented in Dash\">Not Implemented</abbr>**~g;" \
+-pe "s~\{\{DASH_NEW0_14_1\}\}~**<abbr title=\"New in Dash Core v0.14.1\">New in Dash Core 0.14.1</abbr>**~g;" \
+-pe "s~\{\{DASH_UPDATED0_14_1\}\}~**<abbr title=\"Updated in Dash Core v0.14.1\">Updated in Dash Core 0.14.1</abbr>**~g;" \
+-pe "s~\{\{DASH_NEW0_14_0\}\}~**<abbr title=\"New in Dash Core v0.14.0\">New in Dash Core 0.14.0</abbr>**~g;" \
+-pe "s~\{\{DASH_UPDATED0_14_0\}\}~**<abbr title=\"Updated in Dash Core v0.14.0\">Updated in Dash Core 0.14.0</abbr>**~g;" \
+-pe "s~\{\{DASH_NEW0_13_2\}\}~**<abbr title=\"New in Dash Core v0.13.2\">New in Dash Core 0.13.2</abbr>**~g;" \
+-pe "s~\{\{DASH_UPDATED0_13_2\}\}~**<abbr title=\"Updated in Dash Core v0.13.2\">Updated in Dash Core 0.13.2</abbr>**~g;" \
+-pe "s~\{\{DASH_NEW0_13_1\}\}~**<abbr title=\"New in Dash Core v0.13.1\">New in Dash Core 0.13.1</abbr>**~g;" \
+-pe "s~\{\{DASH_UPDATED0_13_1\}\}~**<abbr title=\"Updated in Dash Core v0.13.1\">Updated in Dash Core 0.13.1</abbr>**~g;" \
+-pe "s~\{\{DASH_NEW0_13_0\}\}~**<abbr title=\"New in Dash Core v0.13.0\">New in Dash Core 0.13.0</abbr>**~g;" \
+-pe "s~\{\{DASH_UPDATED0_13_0\}\}~**<abbr title=\"Updated in Dash Core v0.13.0\">Updated in Dash Core 0.13.0</abbr>**~g;" \
+-pe "s~\{\{DASH_NEW0_12_3\}\}~*<abbr title=\"New in Dash Core v0.12.3\">New in Dash Core 0.12.3</abbr>*~g;" \
+-pe "s~\{\{DASH_UPDATED0_12_3\}\}~*<abbr title=\"Updated in Dash Core v0.12.3\">Updated in Dash Core 0.12.3</abbr>*~g;" \
+-pe "s~\{\{DASH_NEW0_12_2\}\}~*<abbr title=\"New in Dash Core v0.12.2\">New in Dash Core 0.12.2</abbr>*~g;" \
+-pe "s~\{\{DASH_UPDATED0_12_2\}\}~*<abbr title=\"Updated in Dash Core v0.12.2\">Updated in Dash Core 0.12.2</abbr>*~g;" \
+-pe "s~\{\{DASH_NEW0_12_1\}\}~*<abbr title=\"New in Dash Core v0.12.1\">New in Dash Core 0.12.1</abbr>*~g;" \
+-pe "s~\{\{DASH_UPDATED0_12_1\}\}~*<abbr title=\"Updated in Dash Core v0.12.1\">Updated in Dash Core 0.12.1</abbr>*~g;" \
+-pe "s~\{\{DARKCOIN_NEW0_11_0\}\}~*<abbr title=\"New in Darkcoin Core v0.11.0\">New in Darkcoin Core 0.11.0</abbr>*~g;" \
+-pe "s~\{\{DARKCOIN_UPDATED0_11_0\}\}~*<abbr title=\"Updated in Dash Core v0.11.0\">Updated in Darkcoin Core 0.11.0</abbr>*~g;" \
+-pe "s~\{\{DEPRECATED\}\}~**<abbr title=\"Deprecated; will be removed in a future version of Bitcoin Core\">Deprecated</abbr>**~g;" \
+-pe "s~\{\{summary_abandonTransaction\}\}~marks an in-wallet transaction and all its in-wallet descendants as abandoned. This allows their inputs to be respent.~g;" \
+-pe "s~\{\{summary_abortRescan\}\}~Stops current wallet rescan~g;" \
+-pe "s~\{\{summary_addMultiSigAddress\}\}~adds a P2SH multisig address to the wallet.~g;" \
+-pe "s~\{\{summary_addNode\}\}~attempts to add or remove a node from the addnode list, or to try a connection to a node once.~g;" \
+-pe "s~\{\{summary_backupWallet\}\}~safely copies \`wallet.dat\`<!--noref--> to the specified file, which can be a directory or a path with filename.~g;" \
+-pe "s~\{\{summary_bls\}\}~provides a set of commands to execute BLS-related actions.~g;" \
+-pe "s~\{\{summary_clearBanned\}\}~clears list of banned nodes.~g;" \
+-pe "s~\{\{summary_combineRawTransaction\}\}~combine multiple partially signed transactions into one transaction.~g;" \
+-pe "s~\{\{summary_createMultiSig\}\}~creates a P2SH multi-signature address.~g;" \
+-pe "s~\{\{summary_createRawTransaction\}\}~creates an unsigned serialized transaction that spends a previous output to a new output with a P2PKH or P2SH address. The transaction is not stored in the wallet or transmitted to the network.~g;" \
+-pe "s~\{\{summary_debug\}\}~changes the debug category from the console.~g;" \
+-pe "s~\{\{summary_decodeRawTransaction\}\}~decodes a serialized transaction hex string into a JSON object describing the transaction.~g;" \
+-pe "s~\{\{summary_decodeScript\}\}~decodes a hex-encoded P2SH redeem script.~g;" \
+-pe "s~\{\{summary_disconnectNode\}\}~immediately disconnects from a specified node.~g;" \
+-pe "s~\{\{summary_dumpHDInfo\}\}~returns an object containing sensitive private info about this HD wallet~g;" \
+-pe "s~\{\{summary_dumpPrivKey\}\}~returns the wallet-import-format (WIP) private key corresponding to an address. (But does not remove it from the wallet.)~g;" \
+-pe "s~\{\{summary_dumpWallet\}\}~creates or overwrites a file with all wallet keys in a human-readable format.~g;" \
+-pe "s~\{\{summary_encryptWallet\}\}~encrypts the wallet with a passphrase.  This is only to enable encryption for the first time. After encryption is enabled, you will need to enter the passphrase to use private keys.~g;" \
+-pe "s~\{\{summary_estimateFee\}\}~estimates the transaction fee per kilobyte that needs to be paid for a transaction to begin confirmation within a certain number of blocks.~g;" \
+-pe "s~\{\{summary_estimatePriority\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_estimateSmartFee\}\}~estimates the transaction fee per kilobyte that needs to be paid for a transaction to begin confirmation within a certain number of blocks and returns the number of blocks for which the estimate is valid.~g;" \
+-pe "s~\{\{summary_estimateSmartPriority\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_fundRawTransaction\}\}~adds inputs to a transaction until it has enough in value to meet its out value.~g;" \
+-pe "s~\{\{summary_gObject\}\}~provides a set of commands for managing governance objects and displaying information about them.~g;" \
+-pe "s~\{\{summary_generate\}\}~mines blocks immediately (before the RPC call returns).~g;" \
+-pe "s~\{\{summary_generateToAddress\}\}~mines blocks immediately to a specified address.~g;" \
+-pe "s~\{\{summary_getAccount\}\}~returns the name of the account associated with the given address.~g;" \
+-pe "s~\{\{summary_getAccountAddress\}\}~returns the current Dash address for receiving payments to this account. If the account doesn't exist, it creates both the account and a new address for receiving payment.  Once a payment has been received to an address, future calls to this RPC for the same account will return a different address.~g;" \
+-pe "s~\{\{summary_getAddedNodeInfo\}\}~returns information about the given added node, or all added nodes (except onetry nodes). Only nodes which have been manually added using the \`addnode\` RPC will have their information displayed.~g;" \
+-pe "s~\{\{summary_getAddressBalance\}\}~returns the balance for address(es).~g;" \
+-pe "s~\{\{summary_getAddressDeltas\}\}~returns all changes for an address.~g;" \
+-pe "s~\{\{summary_getAddressMempool\}\}~returns all mempool deltas for an address.~g;" \
+-pe "s~\{\{summary_getAddressTxids\}\}~returns the txids for an address(es).~g;" \
+-pe "s~\{\{summary_getAddressUtxos\}\}~returns all unspent outputs for an address.~g;" \
+-pe "s~\{\{summary_getAddressesByAccount\}\}~returns a list of every address assigned to a particular account.~g;" \
+-pe "s~\{\{summary_getBalance\}\}~gets the balance in decimal dash across all accounts or for a particular account.~g;" \
+-pe "s~\{\{summary_getBestBlockHash\}\}~returns the header hash of the most recent block on the best block chain.~g;" \
+-pe "s~\{\{summary_getBestChainLock\}\}~returns the block hash of the best chainlock.~g;" \
+-pe "s~\{\{summary_getBlock\}\}~gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block.~g;" \
+-pe "s~\{\{summary_getBlockChainInfo\}\}~provides information about the current state of the block chain.~g;" \
+-pe "s~\{\{summary_getBlockCount\}\}~returns the number of blocks in the local best block chain.~g;" \
+-pe "s~\{\{summary_getBlockHash\}\}~returns the header hash of a block at the given height in the local best block chain.~g;" \
+-pe "s~\{\{summary_getBlockHashes\}\}~returns array of hashes of blocks within the timestamp range provided (requires \`timestampindex\` to be enabled).~g;" \
+-pe "s~\{\{summary_getBlockHeader\}\}~gets a block header with a particular header hash from the local block database either as a JSON object or as a serialized block header.~g;" \
+-pe "s~\{\{summary_getBlockHeaders\}\}~returns an array of items with information about the requested number of blockheaders starting from the requested hash.~g;" \
+-pe "s~\{\{summary_getBlockStats\}\}~computes per block statistics for a given window.~g;" \
+-pe "s~\{\{summary_getBlockTemplate\}\}~gets a block template or proposal for use with mining software.~g;" \
+-pe "s~\{\{summary_getChainTips\}\}~returns information about the highest-height block (tip) of each local block chain.~g;" \
+-pe "s~\{\{summary_getChainTxStats\}\}~compute statistics about the total number and rate of transactions in the chain.~g;" \
+-pe "s~\{\{summary_getConnectionCount\}\}~returns the number of connections to other nodes.~g;" \
+-pe "s~\{\{summary_getDifficulty\}\}~returns the proof-of-work difficulty as a multiple of the minimum difficulty.~g;" \
+-pe "s~\{\{summary_getGenerate\}\}~was removed in Dash Core 0.12.3.~g;" \
+-pe "s~\{\{summary_getGovernanceInfo\}\}~returns an object containing governance parameters.~g;" \
+-pe "s~\{\{summary_getHashesPerSec\}\}~was removed in Bitcoin Core 0.11.0 and is not part of Dash.~g;" \
+-pe "s~\{\{summary_getInfo\}\}~prints various information about the node and the network.~g;" \
+-pe "s~\{\{summary_getMemPoolAncestors\}\}~returns all in-mempool ancestors for a transaction in the mempool.~g;" \
+-pe "s~\{\{summary_getMemPoolDescendants\}\}~returns all in-mempool descendants for a transaction in the mempool.~g;" \
+-pe "s~\{\{summary_getMemPoolEntry\}\}~returns mempool data for given transaction (must be in mempool).~g;" \
+-pe "s~\{\{summary_getMemPoolInfo\}\}~returns information about the node's current transaction memory pool.~g;" \
+-pe "s~\{\{summary_getMemoryInfo\}\}~returns information about memory usage.~g;" \
+-pe "s~\{\{summary_getMerkleBlocks\}\}~returns an array of hex-encoded merkleblocks for <count> blocks<!--noref--> starting from <hash> which match <filter>.~g;" \
+-pe "s~\{\{summary_getMiningInfo\}\}~returns various mining-related information.~g;" \
+-pe "s~\{\{summary_getNetTotals\}\}~returns information about network traffic, including bytes in, bytes out, and the current time.~g;" \
+-pe "s~\{\{summary_getNetworkHashPS\}\}~returns the estimated network hashes per second based on the last n blocks.~g;" \
+-pe "s~\{\{summary_getNetworkInfo\}\}~returns information about the node's connection to the network.~g;" \
+-pe "s~\{\{summary_getNewAddress\}\}~returns a new Dash address for receiving payments. If an account is specified, payments received with the address will be credited to that account.~g;" \
+-pe "s~\{\{summary_getPeerInfo\}\}~returns data about each connected network node.~g;" \
+-pe "s~\{\{summary_getPoolInfo\}\}~returns an object containing mixing pool related information.~g;" \
+-pe "s~\{\{summary_getRawChangeAddress\}\}~returns a new Dash address for receiving change. This is for use with raw transactions, not normal use.~g;" \
+-pe "s~\{\{summary_getRawMemPool\}\}~returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object.~g;" \
+-pe "s~\{\{summary_getRawTransaction\}\}~gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so the RPC may fail on historic transactions unless you use the non-default \`txindex=1\` in your Dash Core startup settings.~g;" \
+-pe "s~\{\{summary_getReceivedByAccount\}\}~returns the total amount received by addresses in a particular account from transactions with the specified number of confirmations.  It does not count coinbase transactions.~g;" \
+-pe "s~\{\{summary_getReceivedByAddress\}\}~returns the total amount received by the specified address in transactions with the specified number of confirmations. It does not count coinbase transactions.~g;" \
+-pe "s~\{\{summary_getSpecialTxes\}\}~returns an array of special transactions found in the specified block~g;" \
+-pe "s~\{\{summary_getSpentInfo\}\}~returns the txid and index where an output is spent (requires \`spentindex\` to be enabled).~g;" \
+-pe "s~\{\{summary_getSuperblockBudget\}\}~returns the absolute maximum sum of superblock payments allowed.~g;" \
+-pe "s~\{\{summary_getTransaction\}\}~gets detailed information about an in-wallet transaction.~g;" \
+-pe "s~\{\{summary_getTxOut\}\}~returns details about an unspent transaction output (UTXO).~g;" \
+-pe "s~\{\{summary_getTxOutProof\}\}~returns a hex-encoded proof that one or more specified transactions were included in a block.~g;" \
+-pe "s~\{\{summary_getTxOutSetInfo\}\}~returns statistics about the confirmed unspent transaction output (UTXO) set. Note that this call may take some time and that it only counts outputs from confirmed transactions---it does not count outputs from the memory pool.~g;" \
+-pe "s~\{\{summary_getUnconfirmedBalance\}\}~returns the wallet's total unconfirmed balance.~g;" \
+-pe "s~\{\{summary_getWalletInfo\}\}~provides information about the wallet.~g;" \
+-pe "s~\{\{summary_getWork\}\}~was removed in Bitcoin Core 0.10.0. and is not part of Dash~g;" \
+-pe "s~\{\{summary_help\}\}~lists all available public RPC commands, or gets help for the specified RPC.  Commands which are unavailable will not be listed, such as wallet RPCs if wallet support is disabled.~g;" \
+-pe "s~\{\{summary_importAddress\}\}~adds an address or pubkey script to the wallet without the associated private key, allowing you to watch for transactions affecting that address or pubkey script without being able to spend any of its outputs.~g;" \
+-pe "s~\{\{summary_importElectrumWallet\}\}~imports keys from an Electrum wallet export file (.csv or .json)~g;" \
+-pe "s~\{\{summary_importMulti\}\}~imports addresses or scripts (with private keys, public keys, or P2SH redeem scripts) and optionally performs the minimum necessary rescan for all imports.~g;" \
+-pe "s~\{\{summary_importPrivKey\}\}~adds a private key to your wallet. The key should be formatted in the wallet import format created by the \`dumpprivkey\` RPC.~g;" \
+-pe "s~\{\{summary_importPrunedFunds\}\}~imports funds without the need of a rescan. Meant for use with pruned wallets.~g;" \
+-pe "s~\{\{summary_importPubKey\}\}~imports a public key (in hex) that can be watched as if it were in your wallet but cannot be used to spend~g;" \
+-pe "s~\{\{summary_importWallet\}\}~imports private keys from a file in wallet dump file format (see the \`dumpwallet\` RPC). These keys will be added to the keys currently in the wallet.  This call may need to rescan all or parts of the block chain for transactions affecting the newly-added keys, which may take several minutes.~g;" \
+-pe "s~\{\{summary_keepass\}\}~provides commands for configuring and managing KeePass authentication~g;" \
+-pe "s~\{\{summary_keyPoolRefill\}\}~fills the cache of unused pre-generated keys (the keypool).~g;" \
+-pe "s~\{\{summary_listAccounts\}\}~lists accounts and their balances.~g;" \
+-pe "s~\{\{summary_listAddressBalances\}\}~lists addresses of this wallet and their balances~g;" \
+-pe "s~\{\{summary_listAddressGroupings\}\}~lists groups of addresses that may have had their common ownership made public by common use as inputs in the same transaction or from being used as change from a previous transaction.~g;" \
+-pe "s~\{\{summary_listBanned\}\}~lists all banned IPs/Subnets.~g;" \
+-pe "s~\{\{summary_listLockUnspent\}\}~returns a list of temporarily unspendable (locked) outputs.~g;" \
+-pe "s~\{\{summary_listReceivedByAccount\}\}~lists the total number of dash received by each account.~g;" \
+-pe "s~\{\{summary_listReceivedByAddress\}\}~lists the total number of dash received by each address.~g;" \
+-pe "s~\{\{summary_listSinceBlock\}\}~gets all transactions affecting the wallet which have occurred since a particular block, plus the header hash of a block at a particular depth.~g;" \
+-pe "s~\{\{summary_listTransactions\}\}~returns the most recent transactions that affect the wallet.~g;" \
+-pe "s~\{\{summary_listUnspent\}\}~returns an array of unspent transaction outputs belonging to this wallet.~g;" \
+-pe "s~\{\{summary_listWallets\}\}~returns a list of currently loaded wallets.~g;" \
+-pe "s~\{\{summary_lockUnspent\}\}~temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only, so nodes start with zero locked outputs and the locked output list is always cleared when a node stops or fails.~g;" \
+-pe "s~\{\{summary_logging\}\}~gets and sets the logging configuration~g;" \
+-pe "s~\{\{summary_masternode\}\}~provides a set of commands for managing masternodes and displaying information about them.~g;" \
+-pe "s~\{\{summary_masternodeBroadcast\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_masternodeList\}\}~returns a list of masternodes in different modes.~g;" \
+-pe "s~\{\{summary_mnSync\}\}~returns the sync status, updates to the next step or resets it entirely.~g;" \
+-pe "s~\{\{summary_move\}\}~moves a specified amount from one account in your wallet to another using an off-block-chain transaction.~g;" \
+-pe "s~\{\{summary_ping-rpc\}\}~sends a P2P ping message to all connected nodes to measure ping time. Results are provided by the \`getpeerinfo\` RPC pingtime and pingwait fields as decimal seconds. The P2P \`ping\` message is handled in a queue with all other commands, so it measures processing backlog, not just network<!--noref--> ping.~g;" \
+-pe "s~\{\{summary_preciousBlock\}\}~treats a block as if it were received before others with the same work.~g;" \
+-pe "s~\{\{summary_prioritiseTransaction\}\}~adds virtual priority or fee to a transaction, allowing it to be accepted into blocks mined by this node (or miners which use this node) with a lower priority or fee. (It can also remove virtual priority or fee, requiring the transaction have a higher priority or fee to be accepted into a locally-mined block.)~g;" \
+-pe "s~\{\{summary_privateSend\}\}~controls the mixing process.~g;" \
+-pe "s~\{\{summary_proTx\}\}~provides a set of commands to execute ProTx related actions.~g;" \
+-pe "s~\{\{summary_pruneBlockChain\}\}~prunes the blockchain up to a specified height or timestamp.~g;" \
+-pe "s~\{\{summary_quorum\}\}~provides a set of commands for quorums (LLMQs).~g;" \
+-pe "s~\{\{summary_removePrunedFunds\}\}~deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to importprunedfunds.~g;" \
+-pe "s~\{\{summary_restGetBlock-noTxDetails\}\}~gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block.  The JSON object includes TXIDs for transactions within the block rather than the complete transactions [GET block][rest get block] returns.~g;" \
+-pe "s~\{\{summary_restGetBlock\}\}~gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block.~g;" \
+-pe "s~\{\{summary_restGetChainInfo\}\}~returns information about the current state of the block chain.~g;" \
+-pe "s~\{\{summary_restGetGetUtxos\}\}~returns an UTXO set given a set of outpoints.~g;" \
+-pe "s~\{\{summary_restGetHeaders\}\}~returns a specified amount of block headers in upward direction.~g;" \
+-pe "s~\{\{summary_restGetMemPool-contents\}\}~returns all transaction in the memory pool with detailed information.~g;" \
+-pe "s~\{\{summary_restGetMemPool-info\}\}~returns information about the node's current transaction memory pool.~g;" \
+-pe "s~\{\{summary_restGetTx\}\}~gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so this method may fail on historic transactions unless you use the non-default \`txindex=1\` in your Dash Core startup settings.~g;" \
+-pe "s~\{\{summary_sendFrom\}\}~spends an amount from a local account to a dash address.~g;" \
+-pe "s~\{\{summary_sendMany\}\}~creates and broadcasts a transaction which sends outputs to multiple addresses.~g;" \
+-pe "s~\{\{summary_sendRawTransaction\}\}~validates a transaction and broadcasts it to the peer-to-peer network.~g;" \
+-pe "s~\{\{summary_sendToAddress\}\}~spends an amount to a given address.~g;" \
+-pe "s~\{\{summary_sentinelPing\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_setAccount\}\}~puts the specified address in the given account.~g;" \
+-pe "s~\{\{summary_setBan\}\}~attempts add or remove a IP/Subnet from the banned list.~g;" \
+-pe "s~\{\{summary_setGenerate\}\}~was removed in Dash Core 0.12.3.~g;" \
+-pe "s~\{\{summary_setNetworkActive\}\}~disables/enables all P2P network activity.~g;" \
+-pe "s~\{\{summary_setPrivateSendAmount\}\}~sets the amount of DASH to be mixed with PrivateSend~g;" \
+-pe "s~\{\{summary_setPrivateSendRounds\}\}~sets the number of PrivateSend mixing rounds to use~g;" \
+-pe "s~\{\{summary_setTxFee\}\}~sets the transaction fee per kilobyte paid by transactions created by this wallet.~g;" \
+-pe "s~\{\{summary_signMessage\}\}~signs a message with the private key of an address.~g;" \
+-pe "s~\{\{summary_signMessageWithPrivKey\}\}~signs a message with a given private key.~g;" \
+-pe "s~\{\{summary_signRawTransaction\}\}~signs a transaction in the serialized transaction format using private keys stored in the wallet or provided in the call.~g;" \
+-pe "s~\{\{summary_spork-rpc\}\}~reads or updates spork settings on the network.~g;" \
+-pe "s~\{\{summary_stop\}\}~safely shuts down the Dash Core server.~g;" \
+-pe "s~\{\{summary_submitBlock\}\}~accepts a block, verifies it is a valid addition to the block chain, and broadcasts it to the network. Extra parameters are ignored by Dash Core but may be used by mining pools or other programs.~g;" \
+-pe "s~\{\{summary_uptime\}\}~returns the total uptime of the server.~g;" \
+-pe "s~\{\{summary_validateAddress\}\}~returns information about the given Dash address.~g;" \
+-pe "s~\{\{summary_verifyChain\}\}~verifies each entry in the local block chain database.~g;" \
+-pe "s~\{\{summary_verifyMessage\}\}~verifies a signed message.~g;" \
+-pe "s~\{\{summary_verifyTxOutProof\}\}~verifies that a proof points to one or more transactions in a block, returning the transactions the proof commits to and throwing an RPC error if the block is not in our best block chain.~g;" \
+-pe "s~\{\{summary_voteRaw\}\}~compiles and relays a governance vote with provided external signature instead of signing vote internally~g;" \
+-pe "s~\{\{summary_walletLock\}\}~removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call \`walletpassphrase\` again before being able to call any methods which require the wallet to be unlocked.~g;" \
+-pe "s~\{\{summary_walletPassphrase\}\}~stores the wallet decryption key in memory for the indicated number of seconds. Issuing the \`walletpassphrase\` command while the wallet is already unlocked will set a new unlock time that overrides the old one.~g;" \
+-pe "s~\{\{summary_walletPassphraseChange\}\}~changes the wallet passphrase from 'old passphrase' to 'new passphrase'.~g;" \
+-pe "s~\{\{summary_clearBanned\}\}~clears list of banned nodes.~g;" \
+-pe "s~\{\{summary_getMerkleBlocks\}\}~returns an array of hex-encoded merkleblocks for <count> blocks<!--noref--> starting from <hash> which match <filter>.~g;" \
+-pe "s~\{\{summary_getAddressUtxos\}\}~returns all unspent outputs for an address.~g;" \
+-pe "s~\{\{summary_getMemPoolEntry\}\}~returns mempool data for given transaction (must be in mempool).~g;" \
+-pe "s~\{\{summary_proTx\}\}~provides a set of commands to execute ProTx related actions.~g;" \
+-pe "s~\{\{summary_getChainTips\}\}~returns information about the highest-height block (tip) of each local block chain.~g;" \
+-pe "s~\{\{summary_getAddressTxids\}\}~returns the txids for an address(es).~g;" \
+-pe "s~\{\{summary_quorum\}\}~provides a set of commands for quorums (LLMQs).~g;" \
+-pe "s~\{\{summary_getMemoryInfo\}\}~returns information about memory usage.~g;" \
+-pe "s~\{\{summary_generateToAddress\}\}~mines blocks immediately to a specified address.~g;" \
+-pe "s~\{\{summary_getTxOutProof\}\}~returns a hex-encoded proof that one or more specified transactions were included in a block.~g;" \
+-pe "s~\{\{summary_getUnconfirmedBalance\}\}~returns the wallet's total unconfirmed balance.~g;" \
+-pe "s~\{\{summary_getNetTotals\}\}~returns information about network traffic, including bytes in, bytes out, and the current time.~g;" \
+-pe "s~\{\{summary_listReceivedByAddress\}\}~lists the total number of dash received by each address.~g;" \
+-pe "s~\{\{summary_getBlockHeader\}\}~gets a block header with a particular header hash from the local block database either as a JSON object or as a serialized block header.~g;" \
+-pe "s~\{\{summary_combineRawTransaction\}\}~combine multiple partially signed transactions into one transaction.~g;" \
+-pe "s~\{\{summary_addMultiSigAddress\}\}~adds a P2SH multisig address to the wallet.~g;" \
+-pe "s~\{\{summary_verifyTxOutProof\}\}~verifies that a proof points to one or more transactions in a block, returning the transactions the proof commits to and throwing an RPC error if the block is not in our best block chain.~g;" \
+-pe "s~\{\{summary_getReceivedByAddress\}\}~returns the total amount received by the specified address in transactions with the specified number of confirmations. It does not count coinbase transactions.~g;" \
+-pe "s~\{\{summary_removePrunedFunds\}\}~deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to importprunedfunds.~g;" \
+-pe "s~\{\{summary_getChainTxStats\}\}~compute statistics about the total number and rate of transactions in the chain.~g;" \
+-pe "s~\{\{summary_getTxOutSetInfo\}\}~returns statistics about the confirmed unspent transaction output (UTXO) set. Note that this call may take some time and that it only counts outputs from confirmed transactions---it does not count outputs from the memory pool.~g;" \
+-pe "s~\{\{summary_listWallets\}\}~returns a list of currently loaded wallets.~g;" \
+-pe "s~\{\{summary_sendMany\}\}~creates and broadcasts a transaction which sends outputs to multiple addresses.~g;" \
+-pe "s~\{\{summary_dumpHDInfo\}\}~returns an object containing sensitive private info about this HD wallet~g;" \
+-pe "s~\{\{summary_fundRawTransaction\}\}~adds inputs to a transaction until it has enough in value to meet its out value.~g;" \
+-pe "s~\{\{summary_importPrivKey\}\}~adds a private key to your wallet. The key should be formatted in the wallet import format created by the \`dumpprivkey\` RPC.~g;" \
+-pe "s~\{\{summary_verifyMessage\}\}~verifies a signed message.~g;" \
+-pe "s~\{\{summary_abandonTransaction\}\}~marks an in-wallet transaction and all its in-wallet descendants as abandoned. This allows their inputs to be respent.~g;" \
+-pe "s~\{\{summary_getBestChainLock\}\}~returns the block hash of the best chainlock.~g;" \
+-pe "s~\{\{summary_decodeRawTransaction\}\}~decodes a serialized transaction hex string into a JSON object describing the transaction.~g;" \
+-pe "s~\{\{summary_createRawTransaction\}\}~creates an unsigned serialized transaction that spends a previous output to a new output with a P2PKH or P2SH address. The transaction is not stored in the wallet or transmitted to the network.~g;" \
+-pe "s~\{\{summary_encryptWallet\}\}~encrypts the wallet with a passphrase.  This is only to enable encryption for the first time. After encryption is enabled, you will need to enter the passphrase to use private keys.~g;" \
+-pe "s~\{\{summary_uptime\}\}~returns the total uptime of the server.~g;" \
+-pe "s~\{\{summary_estimateFee\}\}~estimates the transaction fee per kilobyte that needs to be paid for a transaction to begin confirmation within a certain number of blocks.~g;" \
+-pe "s~\{\{summary_voteRaw\}\}~compiles and relays a governance vote with provided external signature instead of signing vote internally~g;" \
+-pe "s~\{\{summary_pruneBlockChain\}\}~prunes the blockchain up to a specified height or timestamp.~g;" \
+-pe "s~\{\{summary_estimateSmartFee\}\}~estimates the transaction fee per kilobyte that needs to be paid for a transaction to begin confirmation within a certain number of blocks and returns the number of blocks for which the estimate is valid.~g;" \
+-pe "s~\{\{summary_getHashesPerSec\}\}~was removed in Bitcoin Core 0.11.0 and is not part of Dash.~g;" \
+-pe "s~\{\{summary_generate\}\}~mines blocks immediately (before the RPC call returns).~g;" \
+-pe "s~\{\{summary_listAccounts\}\}~lists accounts and their balances.~g;" \
+-pe "s~\{\{summary_getReceivedByAccount\}\}~returns the total amount received by addresses in a particular account from transactions with the specified number of confirmations.  It does not count coinbase transactions.~g;" \
+-pe "s~\{\{summary_getAddressDeltas\}\}~returns all changes for an address.~g;" \
+-pe "s~\{\{summary_gObject\}\}~provides a set of commands for managing governance objects and displaying information about them.~g;" \
+-pe "s~\{\{summary_sendToAddress\}\}~spends an amount to a given address.~g;" \
+-pe "s~\{\{summary_debug\}\}~changes the debug category from the console.~g;" \
+-pe "s~\{\{summary_prioritiseTransaction\}\}~adds virtual priority or fee to a transaction, allowing it to be accepted into blocks mined by this node (or miners which use this node) with a lower priority or fee. (It can also remove virtual priority or fee, requiring the transaction have a higher priority or fee to be accepted into a locally-mined block.)~g;" \
+-pe "s~\{\{summary_ping-rpc\}\}~sends a P2P ping message to all connected nodes to measure ping time. Results are provided by the \`getpeerinfo\` RPC pingtime and pingwait fields as decimal seconds. The P2P \`ping\` message is handled in a queue with all other commands, so it measures processing backlog, not just network<!--noref--> ping.~g;" \
+-pe "s~\{\{summary_getMemPoolAncestors\}\}~returns all in-mempool ancestors for a transaction in the mempool.~g;" \
+-pe "s~\{\{summary_listUnspent\}\}~returns an array of unspent transaction outputs belonging to this wallet.~g;" \
+-pe "s~\{\{summary_getSuperblockBudget\}\}~returns the absolute maximum sum of superblock payments allowed.~g;" \
+-pe "s~\{\{summary_signRawTransaction\}\}~signs a transaction in the serialized transaction format using private keys stored in the wallet or provided in the call.~g;" \
+-pe "s~\{\{summary_logging\}\}~gets and sets the logging configuration~g;" \
+-pe "s~\{\{summary_decodeScript\}\}~decodes a hex-encoded P2SH redeem script.~g;" \
+-pe "s~\{\{summary_getAccount\}\}~returns the name of the account associated with the given address.~g;" \
+-pe "s~\{\{summary_listTransactions\}\}~returns the most recent transactions that affect the wallet.~g;" \
+-pe "s~\{\{summary_move\}\}~moves a specified amount from one account in your wallet to another using an off-block-chain transaction.~g;" \
+-pe "s~\{\{summary_listAddressGroupings\}\}~lists groups of addresses that may have had their common ownership made public by common use as inputs in the same transaction or from being used as change from a previous transaction.~g;" \
+-pe "s~\{\{summary_verifyChain\}\}~verifies each entry in the local block chain database.~g;" \
+-pe "s~\{\{summary_getWalletInfo\}\}~provides information about the wallet.~g;" \
+-pe "s~\{\{summary_getPeerInfo\}\}~returns data about each connected network node.~g;" \
+-pe "s~\{\{summary_signMessage\}\}~signs a message with the private key of an address.~g;" \
+-pe "s~\{\{summary_listReceivedByAccount\}\}~lists the total number of dash received by each account.~g;" \
+-pe "s~\{\{summary_importElectrumWallet\}\}~imports keys from an Electrum wallet export file (.csv or .json)~g;" \
+-pe "s~\{\{summary_getBlockChainInfo\}\}~provides information about the current state of the block chain.~g;" \
+-pe "s~\{\{summary_masternodeBroadcast\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_listBanned\}\}~lists all banned IPs/Subnets.~g;" \
+-pe "s~\{\{summary_importMulti\}\}~imports addresses or scripts (with private keys, public keys, or P2SH redeem scripts) and optionally performs the minimum necessary rescan for all imports.~g;" \
+-pe "s~\{\{summary_getInfo\}\}~prints various information about the node and the network.~g;" \
+-pe "s~\{\{summary_setNetworkActive\}\}~disables/enables all P2P network activity.~g;" \
+-pe "s~\{\{summary_help\}\}~lists all available public RPC commands, or gets help for the specified RPC.  Commands which are unavailable will not be listed, such as wallet RPCs if wallet support is disabled.~g;" \
+-pe "s~\{\{summary_validateAddress\}\}~returns information about the given Dash address.~g;" \
+-pe "s~\{\{summary_sendFrom\}\}~spends an amount from a local account to a dash address.~g;" \
+-pe "s~\{\{summary_keepass\}\}~provides commands for configuring and managing KeePass authentication~g;" \
+-pe "s~\{\{summary_getWork\}\}~was removed in Bitcoin Core 0.10.0. and is not part of Dash~g;" \
+-pe "s~\{\{summary_getGenerate\}\}~was removed in Dash Core 0.12.3.~g;" \
+-pe "s~\{\{summary_importWallet\}\}~imports private keys from a file in wallet dump file format (see the \`dumpwallet\` RPC). These keys will be added to the keys currently in the wallet.  This call may need to rescan all or parts of the block chain for transactions affecting the newly-added keys, which may take several minutes.~g;" \
+-pe "s~\{\{summary_listSinceBlock\}\}~gets all transactions affecting the wallet which have occurred since a particular block, plus the header hash of a block at a particular depth.~g;" \
+-pe "s~\{\{summary_getBlockCount\}\}~returns the number of blocks in the local best block chain.~g;" \
+-pe "s~\{\{summary_getAddressBalance\}\}~returns the balance for address(es).~g;" \
+-pe "s~\{\{summary_getBalance\}\}~gets the balance in decimal dash across all accounts or for a particular account.~g;" \
+-pe "s~\{\{summary_getAddressesByAccount\}\}~returns a list of every address assigned to a particular account.~g;" \
+-pe "s~\{\{summary_getBlockTemplate\}\}~gets a block template or proposal for use with mining software.~g;" \
+-pe "s~\{\{summary_estimateSmartPriority\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_getRawMemPool\}\}~returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object.~g;" \
+-pe "s~\{\{summary_getBlockHash\}\}~returns the header hash of a block at the given height in the local best block chain.~g;" \
+-pe "s~\{\{summary_setTxFee\}\}~sets the transaction fee per kilobyte paid by transactions created by this wallet.~g;" \
+-pe "s~\{\{summary_importPrunedFunds\}\}~imports funds without the need of a rescan. Meant for use with pruned wallets.~g;" \
+-pe "s~\{\{summary_getNewAddress\}\}~returns a new Dash address for receiving payments. If an account is specified, payments received with the address will be credited to that account.~g;" \
+-pe "s~\{\{summary_getBlock\}\}~gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block.~g;" \
+-pe "s~\{\{summary_getMemPoolInfo\}\}~returns information about the node's current transaction memory pool.~g;" \
+-pe "s~\{\{summary_abortRescan\}\}~Stops current wallet rescan~g;" \
+-pe "s~\{\{summary_getTransaction\}\}~gets detailed information about an in-wallet transaction.~g;" \
+-pe "s~\{\{summary_getAccountAddress\}\}~returns the current Dash address for receiving payments to this account. If the account doesn't exist, it creates both the account and a new address for receiving payment.  Once a payment has been received to an address, future calls to this RPC for the same account will return a different address.~g;" \
+-pe "s~\{\{summary_dumpWallet\}\}~creates or overwrites a file with all wallet keys in a human-readable format.~g;" \
+-pe "s~\{\{summary_setPrivateSendAmount\}\}~sets the amount of DASH to be mixed with PrivateSend~g;" \
+-pe "s~\{\{summary_stop\}\}~safely shuts down the Dash Core server.~g;" \
+-pe "s~\{\{summary_masternodeList\}\}~returns a list of masternodes in different modes.~g;" \
+-pe "s~\{\{summary_getSpecialTxes\}\}~returns an array of special transactions found in the specified block~g;" \
+-pe "s~\{\{summary_getPoolInfo\}\}~returns an object containing mixing pool related information.~g;" \
+-pe "s~\{\{summary_getDifficulty\}\}~returns the proof-of-work difficulty as a multiple of the minimum difficulty.~g;" \
+-pe "s~\{\{summary_preciousBlock\}\}~treats a block as if it were received before others with the same work.~g;" \
+-pe "s~\{\{summary_getRawTransaction\}\}~gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so the RPC may fail on historic transactions unless you use the non-default \`txindex=1\` in your Dash Core startup settings.~g;" \
+-pe "s~\{\{summary_getMemPoolDescendants\}\}~returns all in-mempool descendants for a transaction in the mempool.~g;" \
+-pe "s~\{\{summary_getBlockHeaders\}\}~returns an array of items with information about the requested number of blockheaders starting from the requested hash.~g;" \
+-pe "s~\{\{summary_getConnectionCount\}\}~returns the number of connections to other nodes.~g;" \
+-pe "s~\{\{summary_listLockUnspent\}\}~returns a list of temporarily unspendable (locked) outputs.~g;" \
+-pe "s~\{\{summary_walletLock\}\}~removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call \`walletpassphrase\` again before being able to call any methods which require the wallet to be unlocked.~g;" \
+-pe "s~\{\{summary_createMultiSig\}\}~creates a P2SH multi-signature address.~g;" \
+-pe "s~\{\{summary_getAddedNodeInfo\}\}~returns information about the given added node, or all added nodes (except onetry nodes). Only nodes which have been manually added using the \`addnode\` RPC will have their information displayed.~g;" \
+-pe "s~\{\{summary_getSpentInfo\}\}~returns the txid and index where an output is spent (requires \`spentindex\` to be enabled).~g;" \
+-pe "s~\{\{summary_importAddress\}\}~adds an address or pubkey script to the wallet without the associated private key, allowing you to watch for transactions affecting that address or pubkey script without being able to spend any of its outputs.~g;" \
+-pe "s~\{\{summary_submitBlock\}\}~accepts a block, verifies it is a valid addition to the block chain, and broadcasts it to the network. Extra parameters are ignored by Dash Core but may be used by mining pools or other programs.~g;" \
+-pe "s~\{\{summary_getMiningInfo\}\}~returns various mining-related information.~g;" \
+-pe "s~\{\{summary_getNetworkHashPS\}\}~returns the estimated network hashes per second based on the last n blocks.~g;" \
+-pe "s~\{\{summary_backupWallet\}\}~safely copies \`wallet.dat\`<!--noref--> to the specified file, which can be a directory or a path with filename.~g;" \
+-pe "s~\{\{summary_masternode\}\}~provides a set of commands for managing masternodes and displaying information about them.~g;" \
+-pe "s~\{\{summary_dumpPrivKey\}\}~returns the wallet-import-format (WIP) private key corresponding to an address. (But does not remove it from the wallet.)~g;" \
+-pe "s~\{\{summary_setBan\}\}~attempts add or remove a IP/Subnet from the banned list.~g;" \
+-pe "s~\{\{summary_spork-rpc\}\}~reads or updates spork settings on the network.~g;" \
+-pe "s~\{\{summary_getRawChangeAddress\}\}~returns a new Dash address for receiving change. This is for use with raw transactions, not normal use.~g;" \
+-pe "s~\{\{summary_setGenerate\}\}~was removed in Dash Core 0.12.3.~g;" \
+-pe "s~\{\{summary_privateSend\}\}~controls the mixing process.~g;" \
+-pe "s~\{\{summary_getAddressMempool\}\}~returns all mempool deltas for an address.~g;" \
+-pe "s~\{\{summary_getTxOut\}\}~returns details about an unspent transaction output (UTXO).~g;" \
+-pe "s~\{\{summary_signMessageWithPrivKey\}\}~signs a message with a given private key.~g;" \
+-pe "s~\{\{summary_walletPassphrase\}\}~stores the wallet decryption key in memory for the indicated number of seconds. Issuing the \`walletpassphrase\` command while the wallet is already unlocked will set a new unlock time that overrides the old one.~g;" \
+-pe "s~\{\{summary_disconnectNode\}\}~immediately disconnects from a specified node.~g;" \
+-pe "s~\{\{summary_estimatePriority\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_walletPassphraseChange\}\}~changes the wallet passphrase from 'old passphrase' to 'new passphrase'.~g;" \
+-pe "s~\{\{summary_getBlockHashes\}\}~returns array of hashes of blocks within the timestamp range provided (requires \`timestampindex\` to be enabled).~g;" \
+-pe "s~\{\{summary_getGovernanceInfo\}\}~returns an object containing governance parameters.~g;" \
+-pe "s~\{\{summary_setAccount\}\}~puts the specified address in the given account.~g;" \
+-pe "s~\{\{summary_bls\}\}~provides a set of commands to execute BLS-related actions.~g;" \
+-pe "s~\{\{summary_listAddressBalances\}\}~lists addresses of this wallet and their balances~g;" \
+-pe "s~\{\{summary_sendRawTransaction\}\}~validates a transaction and broadcasts it to the peer-to-peer network.~g;" \
+-pe "s~\{\{summary_keyPoolRefill\}\}~fills the cache of unused pre-generated keys (the keypool).~g;" \
+-pe "s~\{\{summary_getBlockStats\}\}~computes per block statistics for a given window.~g;" \
+-pe "s~\{\{summary_getNetworkInfo\}\}~returns information about the node's connection to the network.~g;" \
+-pe "s~\{\{summary_lockUnspent\}\}~temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only, so nodes start with zero locked outputs and the locked output list is always cleared when a node stops or fails.~g;" \
+-pe "s~\{\{summary_sentinelPing\}\}~was removed in Dash Core 0.14.0.~g;" \
+-pe "s~\{\{summary_setPrivateSendRounds\}\}~sets the number of PrivateSend mixing rounds to use~g;" \
+-pe "s~\{\{summary_addNode\}\}~attempts to add or remove a node from the addnode list, or to try a connection to a node once.~g;" \
+-pe "s~\{\{summary_getBestBlockHash\}\}~returns the header hash of the most recent block on the best block chain.~g;" \
+-pe "s~\{\{summary_importPubKey\}\}~imports a public key (in hex) that can be watched as if it were in your wallet but cannot be used to spend~g;" \
+-pe "s~\{\{summary_mnSync\}\}~returns the sync status, updates to the next step or resets it entirely.~g;" \
+-pe "s~\{\{summary_restGetChainInfo\}\}~returns information about the current state of the block chain.~g;" \
+-pe "s~\{\{summary_restGetTx\}\}~gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so this method may fail on historic transactions unless you use the non-default \`txindex=1\` in your Dash Core startup settings.~g;" \
+-pe "s~\{\{summary_restGetGetUtxos\}\}~returns an UTXO set given a set of outpoints.~g;" \
+-pe "s~\{\{summary_restGetMemPool-contents\}\}~returns all transaction in the memory pool with detailed information.~g;" \
+-pe "s~\{\{summary_restGetHeaders\}\}~returns a specified amount of block headers in upward direction.~g;" \
+-pe "s~\{\{summary_restGetBlock\}\}~gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block.~g;" \
+-pe "s~\{\{summary_restGetMemPool-info\}\}~returns information about the node's current transaction memory pool.~g;" \
+-pe "s~\{\{summary_restGetBlock-noTxDetails\}\}~gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block.  The JSON object includes TXIDs for transactions within the block rather than the complete transactions [GET block][rest get block] returns.~g;"
